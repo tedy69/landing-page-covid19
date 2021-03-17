@@ -1,19 +1,36 @@
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-links");
-
-  // Adding EventLisntener to the Burger Menu in order to toggle it
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
-  });
-
-  // Adding EventListener to the body and Links
-  document.addEventListener("click", (e) => {
-    if (!["fas", "burger"].some((el) => e.target.classList.contains(el))) {
-      nav.classList.remove("nav-active");
-    }
-  });
+const settings = {
+  async: true,
+  crossDomain: true,
+  url: "https://covid19.mathdro.id/api/countries/indonesia",
+  method: "GET",
 };
+
+document.addEventListener("DOMContentLoaded", () =>
+  $.ajax(settings).done((response) => {
+    createHtml(response);
+  })
+);
+
+function createHtml(data) {
+  var nf = new Intl.NumberFormat();
+
+  var globalData = data;
+
+  document.querySelector(".total-confirmed").innerHTML = nf.format(
+    globalData.confirmed.value
+  );
+  document.querySelector(".total-death").innerHTML = nf.format(
+    globalData.deaths.value
+  );
+  document.querySelector(".total-recovered").innerHTML = nf.format(
+    globalData.recovered.value
+  );
+  document.querySelector(".total-active").innerHTML = nf.format(
+    globalData.confirmed.value -
+      globalData.recovered.value -
+      globalData.deaths.value
+  );
+}
 
 window.onscroll = function () {
   myFunction();
@@ -30,4 +47,6 @@ function myFunction() {
   }
 }
 
-navSlide();
+function alertshow() {
+  document.querySelector(".alert").style.display = "block";
+}

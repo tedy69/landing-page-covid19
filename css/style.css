@@ -1,11 +1,11 @@
 @font-face {
   font-family: Poppins;
-  src: url(./font/Poppins-Regular.ttf);
+  src: url(./../font/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url(./font/Poppins-Bold.ttf);
+  src: url(./../font/Poppins-Bold.ttf);
 }
 
 :root {
@@ -28,6 +28,32 @@ html {
 body {
   font-family: Poppins;
   background-color: rgba(10, 83, 8, 0.04);
+}
+
+.alert {
+  display: none;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 100px; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  z-index: 1000;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
 
 .data-info {
@@ -66,7 +92,6 @@ body {
 }
 
 .number-stat span {
-  font-family: Poppins-Bold;
   font-weight: 900;
   padding-left: 8px;
   color: black;
@@ -117,6 +142,10 @@ a {
   color: var(--primary-color);
 }
 
+.nav-item {
+  font-size: 14px;
+}
+
 ul {
   list-style: none;
 }
@@ -134,26 +163,26 @@ h3 {
 
 .text-green {
   color: var(--primary-color);
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .text-yellow {
   color: var(--secondary-color);
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 h2 {
   color: var(--primary-color);
-  font-size: 38px;
+  font-size: 32px;
 }
 
 p {
   color: var(--paragraph);
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -463,7 +492,7 @@ ul li a:hover {
 .questions img {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
 }
 
 /* .questions form {
@@ -495,7 +524,7 @@ ul li a:hover {
   align-items: center;
 }
 
-.contact img {
+.contact .pic-contact {
   display: block;
   margin: 0 auto;
   width: 50%;
@@ -506,29 +535,63 @@ ul li a:hover {
   margin-top: 30px;
 } */
 
-.contact form {
+.contact .web {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
-.contact h2 {
-  text-align: center;
+.contact .mobile {
+  display: none;
+}
+
+.contact .mobile-contact {
+  display: none;
 }
 
 .contact input {
   width: 350px;
   padding: 15px 30px;
-  border-radius: 50px;
+  border-radius: 15px;
   border: none;
   box-shadow: 0px 5px 80px rgba(0, 0, 0, 0.09);
   margin-right: 10px;
-  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
-.contact .btn {
+.contact .input {
+  background-color: #3cbc8d;
+  color: black;
+}
+
+.contact .btn-contact {
   text-align: center;
-  width: 120px;
+  width: 100px;
+}
+
+.btn-contact {
+  cursor: pointer;
+  display: table-caption;
+  color: #fff;
+  border: none;
+  font-weight: 550;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  margin-right: 5px;
+}
+
+.contact img {
+  width: 45px;
+  display: inline;
+}
+
+.contact a {
+  padding: 12px 5px;
+}
+
+.img-contact {
+  display: -webkit-inline-box;
+  justify-content: center;
 }
 /* Footer */
 footer {
@@ -536,14 +599,15 @@ footer {
 }
 
 footer .top-footer {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer .top-footer .social i {
+footer .top-footer .social img {
   padding: 0 5px;
   color: var(--secondary-color);
 }
@@ -554,6 +618,14 @@ footer .top-footer .social i:nth-child(3) {
 
 footer .buttom-footer {
   text-align: center;
+}
+
+footer .buttom-footer-mobile {
+  display: none;
+}
+
+footer .top-footer-mobile {
+  display: none;
 }
 
 /* Media Queery - Responsive */
@@ -628,7 +700,7 @@ footer .buttom-footer {
   .todo-wrapper,
   .questions-wrapper,
   .contact-wrapper {
-    padding: 50px 0;
+    padding: 75px 0;
   }
 }
 
@@ -671,6 +743,31 @@ footer .buttom-footer {
 }
 
 @media only screen and (max-width: 768px) {
+  .alert {
+    display: none;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 100px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    z-index: 1000;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
   body {
     overflow-x: hidden;
   }
@@ -728,6 +825,10 @@ footer .buttom-footer {
 
   ul li a:hover {
     color: var(--primary-color);
+  }
+
+  .main-nav ul li {
+    padding: 0;
   }
 
   .nav-links {
@@ -895,7 +996,8 @@ footer .buttom-footer {
 
   .showcase,
   .learn-more,
-  .questions-grid {
+  .questions-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -999,14 +1101,34 @@ footer .buttom-footer {
     margin: 0;
   }
 
-  .questions form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
+  .contact {
+    margin: 0;
   }
 
-  .questions input {
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact .mobile-contact {
+    display: block;
+  }
+
+  .contact .web {
+    display: none;
+  }
+
+  .contact .web-contact {
+    display: none;
+  }
+
+  .contact input {
     padding: 15px 30px;
     border-radius: 50px;
     border: none;
@@ -1019,12 +1141,58 @@ footer .buttom-footer {
     font-size: 20px;
   }
 
-  footer img {
-    width: 120px;
+  footer .ic-social-mobile {
+    width: 24px;
+  }
+
+  footer .logo-social-mobile {
+    width: 50px;
   }
 
   footer p {
     font-size: 15px;
+  }
+
+  footer .top-footer-mobile {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .top-footer {
+    display: none;
+  }
+
+  footer .social-mobile {
+    display: block;
+    width: 100%;
+    -webkit-box-pack: center;
+    /* justify-content: center; */
+    text-align: center;
+  }
+
+  footer .logo-social-mobile {
+    float: left;
+  }
+
+  footer .icon-social-mobile {
+    float: right;
+  }
+
+  footer .top-footer-mobile {
+    flex-wrap: wrap;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    padding: 0 10px;
+    /* justify-content: center; */
+  }
+
+  footer .buttom-footer-mobile {
+    text-align: center;
+    display: block;
   }
 
   .logo img {

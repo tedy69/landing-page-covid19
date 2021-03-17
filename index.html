@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
-      crossorigin="anonymous"
-    />
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="author" content="Mochammad Tedy Fazrin" />
+    <meta name="designer" content="Hanif Hibatullah" />
     <title>Covid-19 Landing Page</title>
+
+    <meta property="og:title" content="Mochammad Tedy Fazrin" />
+    <meta property="og:url" content="https://covid19.riseofdevelopers.tech" />
+    <meta
+      property="og:image"
+      content="https://www.riseofdevelopers.tech/Logo.png"
+    />
+    <meta
+      property="og:description"
+      content="Covid-19 | Corona | Landing Page"
+    />
+    <meta property="og:type" content="Official Studio Website" />
   </head>
 
   <body>
@@ -21,11 +30,12 @@
         <input type="checkbox" id="hamburger1" />
         <label for="hamburger1"></label>
         <ul class="nav-links">
-          <li><a href="#Penularan">Penularan</a></li>
-          <li><a href="#Gejala">Gejala</a></li>
-          <li><a href="#Pencegahan">Pencegahan</a></li>
-          <li><a href="#Sebaran">Data Sebaran</a></li>
-          <li><a href="#Kontak">Kontak Layanan</a></li>
+          <li><a class="nav-item" href="#Tentang">Tentang COVID-19</a></li>
+          <li><a class="nav-item" href="#Penularan">Penularan</a></li>
+          <li><a class="nav-item" href="#Gejala">Gejala</a></li>
+          <li><a class="nav-item" href="#Pencegahan">Pencegahan</a></li>
+          <li><a class="nav-item" href="#Sebaran">Data Sebaran</a></li>
+          <li><a class="nav-item" href="#Kontak">Kontak Layanan</a></li>
         </ul>
       </div>
     </nav>
@@ -49,6 +59,7 @@
       </header>
 
       <!-- Learn More -->
+      <div id="Tentang"></div>
       <section class="learn-more learn-more-wrapper">
         <div class="img-container">
           <img src="./img/about-covid.png" alt="" />
@@ -220,30 +231,30 @@
 
           <div class="statics">
             <div class="total-cases">
-              <span class="total-confirmed">119720249</span>
+              <span class="total-confirmed"></span>
               <p>Terkonfirmasi</p>
             </div>
             <div class="data-info">
               <ul>
                 <li>
-                  <span style="font-size: 60px">&#8226;</span>
+                  <span>&#8226;</span>
                   <div class="number-stat">
-                    <span class="total-death">119720249</span>
-                    <p>Deaths</p>
+                    <span class="total-active"></span>
+                    <p>Kasus Aktif</p>
                   </div>
                 </li>
                 <li>
-                  <span style="font-size: 60px">&#8226;</span>
+                  <span>&#8226;</span>
                   <div class="number-stat">
-                    <span class="total-recovered">119720249</span>
-                    <p>Recovered</p>
+                    <span class="total-recovered"></span>
+                    <p>Sembuh</p>
                   </div>
                 </li>
                 <li>
-                  <span style="font-size: 60px">&#8226;</span>
+                  <span>&#8226;</span>
                   <div class="number-stat">
-                    <span class="Countries"></span>
-                    <p>countries, areas or territories with case</p>
+                    <span class="total-death"></span>
+                    <p>Meninggal</p>
                   </div>
                 </li>
               </ul>
@@ -264,54 +275,153 @@
 
       <div id="Kontak"></div>
       <section class="contact contact-wrapper">
-        <div class="top">
-          <span class="text-green"
-            >Kontak Layanan COVID-19<span class="text-yellow"> COVID-19</span>
-          </span>
-          <p>
-            Ada pertanyaan mengenai COVID-19? Hubungi kami melalui telepon,
-            whatsapp, dan email dibawah ini
-          </p>
-        </div>
-
         <div class="contact-grid contact-wrapper">
-          <div class="text">
-            <h2>Lorem Ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-              numquam ipsam necessitatibus porro quibusdam odio, totam saepe
-              eaque natus. Accusantium, error tenetur sapiente nihil porro
-              labore sit ducimus dolorem soluta.
-            </p>
+          <div class="top">
+            <h3>Kontak Layanan COVID-19</h3>
+            <h2>Ada Pertanyaan? Hubungi Kami</h2>
+            <div class="web-contact">
+              <form class="web">
+                <input
+                  type="email"
+                  class="input"
+                  placeholder="example@email.com"
+                />
+                <a onclick="alertshow();" class="btn-contact">Kirim</a>
+                <a href="tel:112"
+                  ><img class="btn-social" src="./img/telepon.svg"
+                /></a>
+                <a href="https://wa.me/6281133399000" target="_blank"
+                  ><img class="btn-social" src="./img/wa.svg"
+                /></a>
+              </form>
+              <p>
+                Layanan COVID-19 aktif setiap hari pukul 08:00 s.d. 20:00 WIB.
+              </p>
+            </div>
+
+            <div class="mobile-contact">
+              <form class="mobile">
+                <input
+                  type="email"
+                  class="input"
+                  placeholder="example@email.com"
+                />
+              </form>
+              <div class="img-contact">
+                <a onclick="alertshow();" class="btn-contact">Kirim</a>
+                <a href="tel:112"
+                  ><img class="btn-social" src="./img/telepon.svg"
+                /></a>
+                <a href="https://wa.me/6281133399000" target="_blank"
+                  ><img class="btn-social" src="./img/wa.svg"
+                /></a>
+              </div>
+              <p>
+                Layanan COVID-19 aktif setiap hari pukul 08:00 s.d. 20:00 WIB.
+              </p>
+            </div>
           </div>
 
           <div class="img-container">
-            <img src="./img/kontak-layanan 1.png" alt="" />
+            <img class="pic-contact" src="./img/kontak-layanan.png" alt="" />
           </div>
         </div>
       </section>
 
       <footer>
         <div class="top-footer container">
-          <img src="./img/logo.svg" alt="Logo" />
+          <div class="social">
+            <img src="./img/hmif_png.png" alt="Logo" />
+            <img src="./img/infocuplogo.png" alt="Logo" />
+          </div>
+
+          <div class="buttom-footer">
+            <p>
+              &copy; 2021 All rights reserved by INFOCUP HMIF Institut Teknologi
+              Indonesia <br />Coded by : Moch. Tedy Fazrin | Design by : Hanif
+              Hibatullah &copy;
+            </p>
+          </div>
 
           <div class="social">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-twitter"></i>
+            <img src="./img/icon-facebook.png" alt="ic-fb" />
+            <img src="./img/icon-instagram.png" alt="ic-ig" />
+            <img src="./img/icon-youtube.png" alt="ic-yt" />
+            <img src="./img/icon-website.png" alt="ic-web" />
           </div>
         </div>
 
-        <div class="buttom-footer">
+        <div class="top-footer-mobile container">
+          <div class="logo-social-mobile">
+            <img
+              class="logo-social-mobile"
+              src="./img/hmif_png.png"
+              alt="Logo"
+            />
+            <img
+              class="logo-social-mobile"
+              src="./img/infocuplogo.png"
+              alt="Logo"
+            />
+          </div>
+
+          <div class="icon-social-mobile">
+            <a
+              href="https://www.facebook.com/riseofdevelopers/"
+              target="_blank"
+            >
+              <img
+                class="ic-social-mobile"
+                src="./img/icon-facebook.png"
+                alt="ic-fb"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rise.of.developers"
+              target="_blank"
+            >
+              <img
+                class="ic-social-mobile"
+                src="./img/icon-instagram.png"
+                alt="ic-fb"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCU5_fO6VuHb3p2ysALEzg4Q"
+              target="_blank"
+            >
+              <img
+                class="ic-social-mobile"
+                src="./img/icon-youtube.png"
+                alt="ic-fb"
+              />
+            </a>
+            <a href="https://riseofdevelopers.tech" target="_blank">
+              <img
+                class="ic-social-mobile"
+                src="./img/icon-website.png"
+                alt="ic-fb"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="buttom-footer-mobile">
           <p>
-            2021 &copy; All rights reserved by riseofdevelopers.tech <br />Coded
-            by Tedy &copy;
+            &copy; 2021 All rights reserved by INFOCUP HMIF Institut Teknologi
+            Indonesia <br />Coded by : Moch. Tedy Fazrin | Design by : Hanif
+            Hibatullah &copy;
           </p>
         </div>
       </footer>
     </div>
-
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      <strong>Success!</strong> Email Telah Terkirim.
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
