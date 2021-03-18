@@ -8,6 +8,11 @@
   src: url(./../font/Poppins-Bold.ttf);
 }
 
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url(./../font/Poppins-SemiBold.ttf);
+}
+
 :root {
   --primary-color: #049a5b;
   --secondary-color: #fc9c2c;
@@ -95,6 +100,8 @@ body {
   font-weight: 900;
   padding-left: 8px;
   color: black;
+  font-size: 28px;
+  font-family: Poppins-SemiBold;
 }
 
 .number-stat p {
@@ -380,7 +387,6 @@ ul li a:hover {
 
 .card img {
   padding: 50px;
-  height: 300px;
   width: 290px;
   margin: auto;
   text-align: center;
@@ -556,11 +562,11 @@ ul li a:hover {
   border: none;
   box-shadow: 0px 5px 80px rgba(0, 0, 0, 0.09);
   margin-right: 10px;
-  margin-bottom: 10px;
 }
 
 .contact .input {
-  background-color: #3cbc8d;
+  font-family: Poppins;
+  background-color: rgba(180, 221, 202, 0.5);
   color: black;
 }
 
@@ -581,12 +587,16 @@ ul li a:hover {
 }
 
 .contact img {
-  width: 45px;
+  width: 49px;
   display: inline;
 }
 
-.contact a {
+.contact .button-contact {
   padding: 12px 5px;
+}
+
+.contact .button-social {
+  padding: 8px 5px 0px 5px;
 }
 
 .img-contact {
@@ -1130,12 +1140,26 @@ footer .top-footer-mobile {
 
   .contact input {
     padding: 15px 30px;
-    border-radius: 50px;
+    border-radius: 15px;
     border: none;
     box-shadow: 0px 5px 80px rgba(0, 0, 0, 0.09);
     margin-right: 10px;
     margin-left: 10px;
   }
+
+  .contact .button-contact {
+    padding: 12px 5px;
+  }
+
+  .contact .button-social {
+    padding: 8px 5px 0px 5px;
+  }
+
+  .img-contact {
+    margin-top: 10px;
+    display: -webkit-inline-box;
+    justify-content: center;
+}
   /* Footer */
   footer i {
     font-size: 20px;
@@ -1143,10 +1167,6 @@ footer .top-footer-mobile {
 
   footer .ic-social-mobile {
     width: 24px;
-  }
-
-  footer .logo-social-mobile {
-    width: 50px;
   }
 
   footer p {
@@ -1176,10 +1196,12 @@ footer .top-footer-mobile {
 
   footer .logo-social-mobile {
     float: left;
+    margin-left: 5px;
   }
 
   footer .icon-social-mobile {
     float: right;
+    margin-right: 5px;
   }
 
   footer .top-footer-mobile {
@@ -1197,6 +1219,10 @@ footer .top-footer-mobile {
 
   .logo img {
     width: 120px;
+  }
+
+  .map {
+    padding: 40px;
   }
 }
 
