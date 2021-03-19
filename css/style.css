@@ -1,6 +1,6 @@
 @font-face {
   font-family: Poppins;
-  src: url(./../font/Poppins-Regular.ttf);
+  src: url(./../font/Poppins-Medium.ttf);
 }
 
 @font-face {
@@ -133,9 +133,14 @@ body {
 }
 
 .statics {
+  margin-left: 120px;
   text-align: center;
   vertical-align: middle;
   margin-top: 8%;
+}
+
+.map {
+  margin-left: 80px;
 }
 
 input[type="checkbox"] {
@@ -169,6 +174,7 @@ h3 {
 }
 
 .text-green {
+  font-family: Poppins-SemiBold;
   color: var(--primary-color);
   font-size: 32px;
   font-weight: 600;
@@ -176,6 +182,7 @@ h3 {
 }
 
 .text-yellow {
+  font-family: Poppins-SemiBold;
   color: var(--secondary-color);
   font-size: 32px;
   font-weight: 600;
@@ -183,6 +190,7 @@ h3 {
 }
 
 h2 {
+  font-family: Poppins-SemiBold;
   color: var(--primary-color);
   font-size: 32px;
 }
@@ -204,13 +212,22 @@ i {
 }
 
 .showcase-wrapper,
+.contact-wrapper {
+  padding: 40px 0;
+}
+.symptoms-wrapper {
+  margin-top: 55px;
+  padding: 40px 0;
+}
+.todo-wrapper {
+  margin-top: 20px;
+  padding: 40px 0;
+}
 .learn-more-wrapper,
 .contagion-wrapper,
-.symptoms-wrapper,
-.todo-wrapper,
-.questions-wrapper,
-.contact-wrapper {
-  padding: 100px 0;
+.questions-wrapper {
+  padding: 40px 0;
+  margin-top: 100px;
 }
 
 /* Nav */
@@ -356,7 +373,9 @@ ul li a:hover {
   align-items: center;
   text-align: center;
   width: 50%;
-  margin: 50px auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .contagion .bottom {
@@ -488,7 +507,7 @@ ul li a:hover {
 .questions .top {
   width: 100%;
   height: 100%;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -523,17 +542,17 @@ ul li a:hover {
 .contact .top {
   width: 100%;
   height: 100%;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .contact .pic-contact {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
 }
 
 /* .questions form {
@@ -654,13 +673,22 @@ footer .top-footer-mobile {
   }
 
   .showcase-wrapper,
+  .contact-wrapper {
+    padding: 40px 0;
+  }
+  .symptoms-wrapper {
+    margin-top: 55px;
+    padding: 40px 0;
+  }
+  .todo-wrapper {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
   .learn-more-wrapper,
   .contagion-wrapper,
-  .symptoms-wrapper,
-  .todo-wrapper,
-  .questions-wrapper,
-  .contact-wrapper {
-    padding: 100px 0;
+  .questions-wrapper {
+    padding: 40px 0;
+    margin-top: 100px;
   }
 }
 
@@ -679,13 +707,22 @@ footer .top-footer-mobile {
   }
 
   .showcase-wrapper,
+  .contact-wrapper {
+    padding: 40px 0;
+  }
+  .symptoms-wrapper {
+    margin-top: 55px;
+    padding: 40px 0;
+  }
+  .todo-wrapper {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
   .learn-more-wrapper,
   .contagion-wrapper,
-  .symptoms-wrapper,
-  .todo-wrapper,
-  .questions-wrapper,
-  .contact-wrapper {
-    padding: 100px 0;
+  .questions-wrapper {
+    padding: 40px 0;
+    margin-top: 100px;
   }
 }
 
@@ -704,13 +741,22 @@ footer .top-footer-mobile {
   }
 
   .showcase-wrapper,
+  .contact-wrapper {
+    padding: 40px 0;
+  }
+  .symptoms-wrapper {
+    margin-top: 55px;
+    padding: 40px 0;
+  }
+  .todo-wrapper {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
   .learn-more-wrapper,
   .contagion-wrapper,
-  .symptoms-wrapper,
-  .todo-wrapper,
-  .questions-wrapper,
-  .contact-wrapper {
-    padding: 75px 0;
+  .questions-wrapper {
+    padding: 40px 0;
+    margin-top: 75px;
   }
 }
 
@@ -728,13 +774,22 @@ footer .top-footer-mobile {
   }
 
   .showcase-wrapper,
+  .contact-wrapper {
+    padding: 40px 0;
+  }
+  .symptoms-wrapper {
+    margin-top: 55px;
+    padding: 40px 0;
+  }
+  .todo-wrapper {
+    margin-top: 50px;
+    padding: 40px 0;
+  }
   .learn-more-wrapper,
   .contagion-wrapper,
-  .symptoms-wrapper,
-  .todo-wrapper,
-  .questions-wrapper,
-  .contact-wrapper {
-    padding: 50px 0;
+  .questions-wrapper {
+    padding: 40px 0;
+    margin-top: 75px;
   }
 }
 
@@ -804,7 +859,34 @@ footer .top-footer-mobile {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
-  .showcase-wrapper,
+  .showcase-wrapper {
+    padding: 0 0;
+  }
+  .symptoms-wrapper {
+    margin-top: 72px;
+    padding: 40px 0 0 0;
+  }
+  .todo-wrapper {
+    margin-top: 0;
+    padding: 0 0;
+  }
+  .learn-more-wrapper {
+    margin-top: 150px;
+    padding: 0 0;
+  }
+  .contagion-wrapper {
+    margin-top: 60px;
+    padding: 0 0;
+  }
+  .questions-wrapper {
+    padding: 0 0;
+    margin-top: 120px;
+  }
+  .contact-wrapper {
+    padding: 0 0;
+    margin-top: 0px;
+  }
+  /* .showcase-wrapper,
   .learn-more-wrapper,
   .contagion-wrapper,
   .symptoms-wrapper,
@@ -812,7 +894,7 @@ footer .top-footer-mobile {
   .questions-wrapper,
   .contact-wrapper {
     padding: 0 0;
-  }
+  } */
 
   .nav-links,
   footer ul {
@@ -1054,7 +1136,7 @@ footer .top-footer-mobile {
   .learn-more img {
     margin-top: 20px;
     width: 80%;
-    margin: 20px 30px 0;
+    display: block;
   }
 
   /* Contagion */
@@ -1069,7 +1151,7 @@ footer .top-footer-mobile {
   }
 
   .contagion .bottom .card {
-    margin: 20px 0;
+    margin: 20px 40px;
   }
 
   /* Symptoms */
@@ -1107,16 +1189,28 @@ footer .top-footer-mobile {
     font-size: 28px;
   }
 
-  .questions {
-    margin: 0;
-  }
-
-  .contact {
-    margin: 0;
+  .questions .top {
+    width: 80%;
+    height: 100%;
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact h2 {
     font-size: 28px;
+  }
+
+  .contact .top {
+    width: 80%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact .mobile {
@@ -1124,6 +1218,7 @@ footer .top-footer-mobile {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .contact .mobile-contact {
@@ -1157,9 +1252,10 @@ footer .top-footer-mobile {
 
   .img-contact {
     margin-top: 10px;
+    margin-bottom: 10px;
     display: -webkit-inline-box;
     justify-content: center;
-}
+  }
   /* Footer */
   footer i {
     font-size: 20px;
@@ -1223,10 +1319,44 @@ footer .top-footer-mobile {
 
   .map {
     padding: 40px;
+    margin-left: 0;
+  }
+  .statics {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 8%;
+    margin-left: 0;
   }
 }
 
 @media only screen and (max-width: 426px) {
+  .showcase-wrapper {
+    padding: 0 0;
+  }
+  .symptoms-wrapper {
+    margin-top: 100px;
+    padding: 40px 0 0 0;
+  }
+  .todo-wrapper {
+    margin-top: 40px;
+    padding: 0 0;
+  }
+  .learn-more-wrapper {
+    margin-top: 150px;
+    padding: 0 0;
+  }
+  .contagion-wrapper {
+    margin-top: 60px;
+    padding: 0 0;
+  }
+  .questions-wrapper {
+    padding: 0 0;
+    margin-top: 120px;
+  }
+  .contact-wrapper {
+    padding: 0 0;
+    margin-top: 0px;
+  }
   .data-info {
     height: unset;
   }

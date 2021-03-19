@@ -30,12 +30,34 @@
         <input type="checkbox" id="hamburger1" />
         <label for="hamburger1"></label>
         <ul class="nav-links">
-          <li><a class="nav-item" href="#Tentang">Tentang COVID-19</a></li>
-          <li><a class="nav-item" href="#Penularan">Penularan</a></li>
-          <li><a class="nav-item" href="#Gejala">Gejala</a></li>
-          <li><a class="nav-item" href="#Pencegahan">Pencegahan</a></li>
-          <li><a class="nav-item" href="#Sebaran">Data Sebaran</a></li>
-          <li><a class="nav-item" href="#Kontak">Kontak Layanan</a></li>
+          <li>
+            <a class="nav-item" onclick="toSticky();" href="#Tentang"
+              >Tentang COVID-19</a
+            >
+          </li>
+          <li>
+            <a class="nav-item" onclick="toSticky();" href="#Penularan"
+              >Penularan</a
+            >
+          </li>
+          <li>
+            <a class="nav-item" onclick="toSticky();" href="#Gejala">Gejala</a>
+          </li>
+          <li>
+            <a class="nav-item" onclick="toSticky();" href="#Pencegahan"
+              >Pencegahan</a
+            >
+          </li>
+          <li>
+            <a class="nav-item" onclick="toSticky();" href="#Sebaran"
+              >Data Sebaran</a
+            >
+          </li>
+          <li>
+            <a class="nav-item" onclick="toSticky();" href="#Kontak"
+              >Kontak Layanan</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
@@ -51,7 +73,9 @@
             pandemi virus corona, mari kita tetap produktif dan melakukan
             kegiatan-kegiatan positif lainnya dari rumah.
           </p>
-          <a href="#" class="btn">Layanan COVID-19</a>
+          <a href="#Kontak" onclick="toSticky();" class="btn"
+            >Layanan COVID-19</a
+          >
         </div>
         <div class="showcase-right">
           <img src="./img/ilustrasi-1.svg" alt="" />
@@ -67,7 +91,7 @@
 
         <div class="text">
           <h3>Apa itu COVID-19?</h3>
-          <h2>Coronavirus</h2>
+          <h2>Tentang Virus Corona</h2>
           <p>
             Coronavirus Disease 2019 (COVID-19) adalah penyakit menular yang
             disebabkan oleh severe acute respiratory syndrome coronavirus 2
@@ -76,7 +100,7 @@
             secara global. Virus ini mengakibatkan pandemi virus corona sejak
             2019, dan masih berlangsung hingga saat ini.
           </p>
-          <a href="#" class="btn">Lihat Selengkapnya</a>
+          <a class="btn">Lihat Selengkapnya</a>
         </div>
       </section>
 
@@ -221,7 +245,10 @@
           <span class="text-green"
             >Data Sebaran<span class="text-yellow"> COVID-19</span>
           </span>
-          <p>Update pasien COVID-19 Indonesia per tanggal 16 Maret 2021</p>
+          <p>
+            Update pasien COVID-19 Indonesia per hari
+            <span class="get-time"></span>
+          </p>
         </div>
 
         <div class="questions-grid">
@@ -286,17 +313,23 @@
                   class="input"
                   placeholder="example@email.com"
                 />
-                <a onclick="alertshow();" target="_blank" class="btn-contact button-contact"
+                <a
+                  onclick="alertshow();"
+                  target="_blank"
+                  class="btn-contact button-contact"
                   >Kirim</a
                 >
                 <a href="tel:112" class="button-social"
                   ><img class="btn-social" src="./img/telepon.svg"
                 /></a>
-                <a href="https://wa.me/6281133399000" target="_blank"  class="button-social"
+                <a
+                  href="https://wa.me/6281133399000"
+                  target="_blank"
+                  class="button-social"
                   ><img class="btn-social" src="./img/wa.svg"
                 /></a>
               </form>
-              <p>
+              <p style="text-align: left">
                 Layanan COVID-19 aktif setiap hari pukul 08:00 s.d. 20:00 WIB.
               </p>
             </div>
@@ -310,19 +343,27 @@
                 />
               </form>
               <div class="img-contact">
-                <a onclick="alertshow();" target="_blank" class="btn-contact button-contact"
+                <a
+                  onclick="alertshow();"
+                  target="_blank"
+                  class="btn-contact button-contact"
                   >Kirim</a
                 >
                 <a href="tel:112" target="_blank" class="button-social"
                   ><img class="btn-social" src="./img/telepon.svg"
                 /></a>
-                <a href="https://wa.me/6281133399000" target="_blank" class="button-social"
+                <a
+                  href="https://wa.me/6281133399000"
+                  target="_blank"
+                  class="button-social"
                   ><img class="btn-social" src="./img/wa.svg"
                 /></a>
               </div>
-              <p>
-                Layanan COVID-19 aktif setiap hari pukul 08:00 s.d. 20:00 WIB.
-              </p>
+              <div class="text">
+                <p>
+                  Layanan COVID-19 aktif setiap hari pukul 08:00 s.d. 20:00 WIB.
+                </p>
+              </div>
             </div>
           </div>
 
