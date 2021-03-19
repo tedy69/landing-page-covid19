@@ -924,7 +924,7 @@ footer .top-footer-mobile {
   }
 
   .nav-links {
-    display: block;
+    display: none;
     position: absolute;
     top: 90px;
     right: 0;

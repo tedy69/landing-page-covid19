@@ -64,11 +64,9 @@ switch (bulan) {
     bulan = "Desember";
     break;
 }
-var tampilTanggal =
-  hari + ", tanggal " + tanggal + " " + bulan + " " + tahun;
+var tampilTanggal = hari + ", tanggal " + tanggal + " " + bulan + " " + tahun;
 
 document.querySelector(".get-time").innerHTML = tampilTanggal;
-  
 
 const settings = {
   async: true,
@@ -121,8 +119,13 @@ function myFunction() {
 
 function toSticky() {
   navbar.classList.add("sticky");
+  document.getElementById("hamburger1").checked = false;
 }
 
 function alertshow() {
   document.querySelector(".alert").style.display = "block";
+}
+
+function showNav() {
+  document.querySelector(".nav-links").style.display = "block";
 }
